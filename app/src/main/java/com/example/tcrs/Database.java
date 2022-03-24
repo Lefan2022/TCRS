@@ -38,15 +38,9 @@ public class Database {
 
     //delete a existing profile
     public void DeleteProfile(Profile p){
-        int temp = size;
-        while(temp>0){
-            if(db.get(temp-1).id == p.id){
-                db.remove(temp-1);
-                size--;
-                return;
-            }else{
-                temp--;
-            }
+        if(FindProfileByID(p.id) != null) {
+            db.remove(p);
+            size--;
         }
     }
 }
