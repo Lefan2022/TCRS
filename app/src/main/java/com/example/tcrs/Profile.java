@@ -1,5 +1,6 @@
 package com.example.tcrs;
 
+//Profile object the superclass of each specific profile
 public class Profile {
     //type indicate the type of this user(1 for admin, 2 for officer, 3 for driver)
     int type = -1;
@@ -19,7 +20,7 @@ public class Profile {
     }
 
     public String getId() {
-        return id;
+        return this.id;
     }
 
     public void setId(String id) {
