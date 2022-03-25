@@ -1,16 +1,12 @@
 package com.example.tcrs;
 
-//Profile object for drivers
-public class DriverProfile extends Profile{
+public class AdminProfile extends Profile{
     String FirstName = null;
     String LastName =null;
     String Password = null;
-    String LicenseNo = null;
-    double Balance = 0;
-    TicketsHistory TicketHistory = null;
 
     //constructor
-    public DriverProfile(){}
+    public AdminProfile(){}
 
     //getters and setters
     public String getFirstName() {
@@ -25,18 +21,6 @@ public class DriverProfile extends Profile{
         return this.Password;
     }
 
-    public String getLicenseNo() {
-        return this.LicenseNo;
-    }
-
-    public double getBalance() {
-        return this.Balance;
-    }
-
-    public TicketsHistory getTH() {
-        return this.TicketHistory;
-    }
-
     public void setFirstName(String firstName) {
         this.FirstName = firstName;
     }
@@ -47,13 +31,5 @@ public class DriverProfile extends Profile{
 
     public void setPassword(String password) {
         this.Password = password;
-    }
-
-    public void setLicenseNo(String licenseNo) {
-        this.LicenseNo = licenseNo;
-    }
-
-    public void setBalance(double balance) {
-        this.Balance = balance;
     }
 }
