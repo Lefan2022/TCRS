@@ -1,8 +1,9 @@
 package com.example.tcrs;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Database {
+public class Database implements Serializable {
     //all the profiles stores in the ArrayList called db
     ArrayList<Profile> db = new ArrayList<Profile>();
     //size is the number of current profiles
