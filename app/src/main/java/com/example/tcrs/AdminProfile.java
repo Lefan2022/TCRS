@@ -1,12 +1,33 @@
 package com.example.tcrs;
 
-public class AdminProfile extends Profile{
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class AdminProfile implements Parcelable {
     String FirstName = null;
     String LastName =null;
     String Password = null;
 
     //constructor
     public AdminProfile(){}
+
+    protected AdminProfile(Parcel in) {
+        FirstName = in.readString();
+        LastName = in.readString();
+        Password = in.readString();
+    }
+
+    public static final Creator<AdminProfile> CREATOR = new Creator<AdminProfile>() {
+        @Override
+        public AdminProfile createFromParcel(Parcel in) {
+            return new AdminProfile(in);
+        }
+
+        @Override
+        public AdminProfile[] newArray(int size) {
+            return new AdminProfile[size];
+        }
+    };
 
     //getters and setters
     public String getFirstName() {
@@ -31,5 +52,17 @@ public class AdminProfile extends Profile{
 
     public void setPassword(String password) {
         this.Password = password;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(FirstName);
+        parcel.writeString(LastName);
+        parcel.writeString(Password);
     }
 }
