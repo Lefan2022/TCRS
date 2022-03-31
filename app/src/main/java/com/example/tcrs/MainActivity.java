@@ -1,4 +1,4 @@
-package com.example.tcrs;
+package com.bignerdranch.android.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
