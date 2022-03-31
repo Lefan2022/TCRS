@@ -45,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         String pass = password.getText().toString();
 
         if (name.equals("genericPass") || pass.equals("haha")) {
-            Intent intent = new Intent(this, SignUps.class); //Will take us to login information.
+            Intent intent = new Intent(this, profilePage.class); //Will take us to login information.
 
         } else if (name.equals("") || pass.equals("")) {
             Toast.makeText(this, "Empty fields", Toast.LENGTH_SHORT).show();
