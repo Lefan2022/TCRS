@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -13,18 +14,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Database database = new Database();
-        Profile p = new Profile();
-        p.setId("001");
-        p.setType(1);
-        database.AddProfile(p);
+//        Profile firstDriver = new DriverProfile();
+//        firstDriver.setType(3);
+//        firstDriver.setId("001");
+//        firstDriver.setBalance(0);
+//        firstDriver.setFirstName("First");
+//        firstDriver.setLastName("Driver");
+//        firstDriver.setPassword("123456");
+//        firstDriver.setLicenseNo("001");
+//        database.AddProfile(firstDriver);
 
 
-        //Passing the database from MainActivity to OfficerActivity
-        //this is for OfficerActivity part, but you can use it as a template for your own activity
-        //If your activity modified any data, you can use the same method to pass the database back
-        Intent dbIntent = new Intent(MainActivity.this, OfficerActivity.class);
-        dbIntent.putExtra("DatabaseKey", database);
-        startActivity(dbIntent);
+        Intent OfficerIntent = new Intent(MainActivity.this, OfficerActivity.class);
+        OfficerIntent.putExtra("DatabaseKey", database);
+        startActivity(OfficerIntent);
 
     }
 

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView_fine_amount"
+        android:layout_width="142dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="116dp"
+        android:text="Fine Amount"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_violation_type" />
+
+    <TextView
+        android:id="@+id/textView_violation_type"
+        android:layout_width="167dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="40dp"
+        android:text="Violation Type"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_id" />
+
+    <Button
+        android:id="@+id/button_issue_ticket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="21dp"
+        android:text="Issue Ticket"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_check"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="21dp"
+        android:text="Check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_profile"
+        app:layout_constraintStart_toEndOf="@+id/button_issue_ticket" />
+
+    <Button
+        android:id="@+id/button_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="21dp"
+        android:text="Profile"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_check" />
+
+    <Button
+        android:id="@+id/button_issue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="60dp"
+        android:text="Issue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_fineAmount" />
+
+    <TextView
+        android:id="@+id/textView_id"
+        android:layout_width="97dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="88dp"
+        android:text="Driver ID"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_driverID"
+        android:layout_width="234dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Enter ID No."
+        android:inputType="textShortMessage|textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_id"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_violationType"
+        android:layout_width="342dp"
+        android:layout_height="74dp"
+        android:layout_marginTop="2dp"
+        android:ems="10"
+        android:hint="Enter the violation type"
+        android:inputType="textLongMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.753"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView_violation_type" />
+
+    <EditText
+        android:id="@+id/editText_fineAmount"
+        android:layout_width="211dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="10dp"
+        android:ems="10"
+        android:hint="enter amount"
+        android:inputType="textShortMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_fine_amount"
+        app:layout_constraintTop_toBottomOf="@+id/editText_violationType" />
+</androidx.constraintlayout.widget.ConstraintLayout>

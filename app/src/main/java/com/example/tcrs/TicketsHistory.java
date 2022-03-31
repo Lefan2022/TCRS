@@ -50,4 +50,16 @@ public class TicketsHistory {
         }
         return null;
     }
+
+//    public ArrayList<Tickets> FindTicketsByID(String UserID){
+//        int size = HistoryList.size();
+//        ArrayList<Tickets> tickets = new ArrayList<Tickets>();
+//        while(size>0){
+//            if(HistoryList.get(size-1). == UserID){
+//
+//            }else{
+//                size--;
+//            }
+//        }
+//    }
 }
