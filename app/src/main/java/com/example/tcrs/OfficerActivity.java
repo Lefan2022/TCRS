@@ -150,7 +150,6 @@ public class OfficerActivity extends AppCompatActivity {
 
         });
 
-
     }
 
 
