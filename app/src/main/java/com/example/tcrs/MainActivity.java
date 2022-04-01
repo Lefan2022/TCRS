@@ -1,13 +1,10 @@
-package com.example.tcrs;
+package com.bignerdranch.android.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import java.io.FileOutputStream;
-import java.io.ObjectOutputStream;
-
+//Only initializes the database
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -17,31 +14,9 @@ public class MainActivity extends AppCompatActivity {
 
         Database database = new Database();
 
-        DriverProfile firstDriver = new DriverProfile();
-        firstDriver.setID("001");
-        firstDriver.setBalance(0);
-        firstDriver.setFirstName("First");
-        firstDriver.setLastName("Driver");
-        firstDriver.setPassword("123456");
-        firstDriver.setLicenseNo("001");
-
-        OfficerProfile firstOfficer = new OfficerProfile();
-        firstOfficer.setID("101");
-        firstOfficer.setFirstName("First");
-        firstOfficer.setLastName("Officer");
-        firstOfficer.setPassword("987654");
-
-        database.AddDriverProfile(firstDriver);
-        database.AddOfficerProfile(firstOfficer);
-
-
-
-        Intent OfficerIntent = new Intent(MainActivity.this, OfficerActivity.class);
-        OfficerIntent.putExtra("DatabaseKey", database);
-        OfficerIntent.putExtra("myProfile",firstOfficer);
-        startActivity(OfficerIntent);
-
+        Intent loginIntent = new Intent(MainActivity.this, LoginActivity.class);
+        loginIntent.putExtra("DatabaseKey", database);
+        startActivity(loginIntent);
 
     }
-
 }
