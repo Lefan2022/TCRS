@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.myapplication.AddMoney">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ImageView
+        android:id="@+id/td"
+        android:layout_width="67dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="2dp"
+        android:src="@drawable/td"
+        app:layout_constraintBottom_toTopOf="@+id/bmo"
+        app:layout_constraintEnd_toEndOf="@+id/bmo"
+        app:layout_constraintStart_toStartOf="@+id/bmo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/bmo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/bmo"
+        app:layout_constraintBottom_toTopOf="@+id/rbc"
+        app:layout_constraintEnd_toEndOf="@+id/rbc"
+        app:layout_constraintStart_toStartOf="@+id/rbc"
+        app:layout_constraintTop_toBottomOf="@+id/td" />
+
+    <ImageView
+        android:id="@+id/rbc"
+        android:layout_width="146dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="7dp"
+        android:src="@drawable/rbc"
+        app:layout_constraintBottom_toTopOf="@+id/scotia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bmo" />
+
+    <ImageView
+        android:id="@+id/scotia"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="113dp"
+        android:src="@drawable/scotia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/rbc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbc" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="178dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="168dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="301dp"
+        android:text="Add money"
+        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.288" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="65dp"
+        android:text="other"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
