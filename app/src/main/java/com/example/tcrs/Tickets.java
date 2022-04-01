@@ -41,7 +41,7 @@ public class Tickets {
         this.ViolationType = violationType;
     }
 
-    public void setFineAmount(double fineAmount) {
+    public void setFineAmount(double fineAmount) throws Exception{
         this.FineAmount = fineAmount;
     }
 }
